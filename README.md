@@ -23,22 +23,23 @@ The app supports user registration, authentication, and personal access to notes
    ```bash
    git clone https://github.com/USERNAME/NoteApp.git
    cd NoteApp
-Create and activate a virtual environment:
-python -m venv .venv
-source .venv/bin/activate   # Linux/Mac
-.venv\Scripts\activate      # Windows
+2. Create and activate a virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate   # Linux/Mac
+   .venv\Scripts\activate      # Windows
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+4.Run database migrations:
+   ```bash
+   python manage.py migrate
+5. Start the development server:
+   ```bash
+   python manage.py runserver
 
-Install dependencies:
-pip install -r requirements.txt
-
-Run database migrations:
-python manage.py migrate
-
-Start the development server:
-python manage.py runserver
-
-Open in your browser:
-http://127.0.0.1:8000
+   6.Open in your browser:
+   http://127.0.0.1:8000
 
 📂 Project Structure
 php
