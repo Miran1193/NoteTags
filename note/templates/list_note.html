@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}My Notes{% endblock %}
+{% block content %}
+<h2 class="mb-4">📒 My Notes</h2>
+<div class="row">
+    {% for note in notes %}
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ note.title }}</h5>
+                    <p class="card-text">{{ note.text|truncatewords:20 }}</p>
+                    {% if note.tag_set.all %}
+                        <p>
+                            {% for tag in note.tag_set.all %}
+                                <span class="bage bg-info text-dark">{{ tag.name }}</span>
+                            {% endfor %}
+                        </p>
+                    {% endif %}
+                    <p class="card-text"><small>Created: {{ note.created|date:"d.m.Y H:i" }}</small></p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{% url 'notebook:update_note' note.pk %}" class="btn btn-sm btn-warning">✏ Edit</a>
+                    <a href="{% url 'notebook:delete_note' note.pk %}" class="btn btn-sm btn-danger">🗑 Delete</a>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>No notes yet. <a href="{% url 'notebook:create_note' %}">Create one</a>.</p>
+    {% endfor %}
+</div>
+{% endblock %}
