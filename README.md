@@ -31,19 +31,22 @@ The app supports user registration, authentication, and personal access to notes
 3. Install dependencies:
    ```bash
    pip install -r requirements.txt
-4.Run database migrations:
-   ```bash
-   python manage.py migrate
+4. Run database migrations:
+      ```bash
+   python manage.py migrate  
 5. Start the development server:
-   ```bash
+      ```bash
    python manage.py runserver
-
-   6.Open in your browser:
+6. Open in your browser:
+      ```bash
    http://127.0.0.1:8000
 
+  
+
+   
+
+
 📂 Project Structure
-php
-Копировать код
 NoteApp/
 │── notebook/        # main app
 │── templates/       # HTML templates
