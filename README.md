@@ -21,8 +21,8 @@ The app supports user registration, authentication, and personal access to notes
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/USERNAME/NoteApp.git
-   cd NoteApp
+   git clone https://github.com/Miran1193/NoteTags
+   cd note
 2. Create and activate a virtual environment:
    ```bash
    python -m venv .venv
