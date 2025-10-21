@@ -41,10 +41,6 @@ The app supports user registration, authentication, and personal access to notes
       ```bash
    http://127.0.0.1:8000
 
-  
-
-   
-
 
 📂 Project Structure
 NoteApp/
