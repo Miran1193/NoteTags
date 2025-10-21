@@ -40,8 +40,6 @@ The app supports user registration, authentication, and personal access to notes
 6. Open in your browser:
       ```bash
    http://127.0.0.1:8000
-
-
 📂 Project Structure
 NoteApp/
 │── notebook/        # main app
